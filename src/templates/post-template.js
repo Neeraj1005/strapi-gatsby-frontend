@@ -7,7 +7,7 @@ query($id: String!) {
 strapiPosts(id: { eq: $id }) {
     title
     description
-    featured {
+    featured_image {
       childImageSharp {
         fluid {
           src
@@ -23,7 +23,7 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <h1 dangerouslySetInnerHTML={{ __html: title }} />
-      <img src={data.strapiPosts.featured.childImageSharp.fluid.src} alt="" />
+      {/* <img src={data.strapiPosts.featured_image.childImageSharp.fluid.src} alt="" /> */}
       <div dangerouslySetInnerHTML={{ __html: description }} />
     </Layout>
   )

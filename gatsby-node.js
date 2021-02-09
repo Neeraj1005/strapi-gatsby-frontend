@@ -11,13 +11,6 @@ exports.createPages = async ({ actions, graphql }) => {
             id
             name
             }
-            featured {
-            childImageSharp {
-                fluid {
-                src
-                }
-            }         
-            }
         }
         }
         allStrapiCategories {

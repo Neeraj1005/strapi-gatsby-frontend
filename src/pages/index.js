@@ -16,11 +16,11 @@ const IndexPage = ({ data }) => (
         {post.categories.map(cat => (
           <Link to={`/category/${cat.slug}`}>{cat.name}</Link>
         ))}
-        <img
+        {/* <img
           style={{ width: `5rem` }}
-          src={post.featured.childImageSharp.fluid.src}
+          src={post.featured_image.childImageSharp.fluid.src}
           alt=""
-        />
+        /> */}
       </div>
     ))}
   </Layout>
@@ -39,7 +39,7 @@ export const allPosts = graphql`
           name
           slug
         }
-        featured {
+        featured_image {
           childImageSharp {
             fluid {
               src
